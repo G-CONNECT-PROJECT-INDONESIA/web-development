@@ -8,12 +8,13 @@ Brief project description goes here.
 - Database (OTW)
 - MQTT
 - HTML, CSS, JS
+- Chart.js
 
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/username/projectname.git`
 2. Change into the project directory: `cd projectname`
-3. Install dependencies: `npm install`
+3. Update / Install dependencies: `npm update` or `npm install`
 
 ## Configuration
 
@@ -23,7 +24,7 @@ Brief project description goes here.
 
 To run the application, use the following command:
 
-npm test
+`node app` or if you've installed nodemon, you can use `nodemon app`
 
 
 ## Contributing
