@@ -1,0 +1,143 @@
+:root {
+  --primary: #002956;
+  --bg: #001429;
+  --secondary: #021868;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
+
+.headnav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  padding: 0 2%;
+}
+
+.headnav .logo-gconnect-group {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.headnav .logo-gconnect-group img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.headnav .logo-gconnect-group h1,
+.headnav .logo-gconnect-group p {
+  color: #fff;
+}
+
+.headnav .logo-gconnect-group a {
+  margin-left: 2%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 2%;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.headnav .search-group {
+  display: flex;
+}
+
+.headnav .search-group .search {
+  height: 2rem;
+  width: 11rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  background-color: #2d85b7;
+}
+
+.headnav .search-group .search-btn {
+  padding: 0.2rem 0.9rem;
+  background-color: #04e3ff;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 0.2rem;
+}
+
+.row-content {
+  display: flex;
+  min-height: 100vh;
+}
+
+.row-content .menu-container {
+  background-color: var(--secondary);
+  width: 3.3rem;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  z-index: 999;
+  margin-top: 5rem;
+}
+
+.row-content .menu-container:hover {
+  width: 13.5rem;
+  transition: 0.6s ease-in;
+  box-shadow: 1rem 0px 3rem #103a9c;
+  transition-timing-function: ease-in;
+}
+
+.row-content .menu-container .menu-button:hover {
+  background-color: #001e3e;
+}
+
+.row-content .menu-container .menu-button a {
+  display: flex;
+  align-items: center;
+}
+
+.row-content .menu-container .menu-button a img {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 0.5rem;
+}
+
+.row-content .menu-container .menu-button a p {
+  color: #fff;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.row-content .content {
+  width: 100%;
+  padding: 7rem 7% 0rem;
+}
+
+.row-content .content .chart-box {
+  padding: 2rem 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 50vh;
+  margin-top: 5rem;
+  margin-left: 5rem;
+}
