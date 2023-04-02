@@ -1,0 +1,232 @@
+:root {
+  --primary: #002956;
+  --bg: #001429;
+  --secondary: #021868;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+}
+
+.headnav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  padding: 0 2%;
+}
+
+.headnav .logo-gconnect-group {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.headnav .logo-gconnect-group img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.headnav .logo-gconnect-group h1,
+.headnav .logo-gconnect-group p {
+  color: #fff;
+}
+
+.headnav .logo-gconnect-group a {
+  margin-left: 2%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rem 2%;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.headnav .search-group {
+  display: flex;
+}
+
+.headnav .search-group .search {
+  height: 2rem;
+  width: 11rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  background-color: #2d85b7;
+}
+
+.headnav .search-group .search-btn {
+  padding: 0.2rem 0.9rem;
+  background-color: #04e3ff;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 0.2rem;
+}
+
+.row-content {
+  background-color: var(--bg);
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+.row-content .menu-container {
+  background-color: var(--secondary);
+  width: 3.3rem;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+  z-index: 999;
+}
+
+.row-content .menu-container:hover {
+  width: 13.5rem;
+  transition: 0.6s ease-in;
+  box-shadow: 1rem 0px 3rem #103a9c;
+  transition-timing-function: ease-in;
+}
+
+.row-content .menu-container .menu-button:hover {
+  background-color: #001e3e;
+}
+
+.row-content .menu-container .menu-button a {
+  display: flex;
+  align-items: center;
+}
+
+.row-content .menu-container .menu-button a img {
+  height: 2rem;
+  width: 2rem;
+  margin-left: 0.5rem;
+}
+
+.row-content .menu-container .menu-button a p {
+  color: #fff;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.row-content .node-input {
+  padding: 0 7% 0 4rem;
+}
+
+.row-content .node-input #node-option {
+  color: #fdfdfd;
+  margin: 2rem 0;
+  background-color: #2d85b7;
+  cursor: pointer;
+  padding: 0.5rem 5%;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.row-content .content .datetime {
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  padding: 2rem;
+  border-radius: 0.6rem;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+  margin-left: 3rem;
+}
+
+.row-content .content .datetime:hover {
+  background: #2e94e3;
+  box-shadow: 0 0 0.4rem #2e94e3;
+}
+
+.row-content .content .datetime .date {
+  font-family: "Poppins";
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.row-content .content .datetime .time {
+  font-family: "Poppins";
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  display: flex;
+  line-height: 0.8;
+}
+
+.row-content .widget h1 {
+  color: #04e3ff;
+  text-align: center;
+  font-family: "Poppins";
+  margin-left: 4rem;
+}
+
+.row-content .widget .btr-info {
+  display: flex;
+  justify-content: center;
+  margin-left: 4rem;
+  padding: 0.5rem 0;
+  letter-spacing: 0.2rem;
+}
+
+.row-content .widget #widget-node1,
+.row-content .widget #widget-node2,
+.row-content .widget #widget-node3 {
+  margin-top: 3rem;
+}
+
+.row-content .widget .widget-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 4rem;
+}
+
+.row-content .widget .widget-content a div {
+  background-color: #04e3ff;
+  margin: 1rem;
+  width: 13rem;
+  height: 10rem;
+  text-align: center;
+  border-radius: 5%;
+  padding: 0.5rem 0;
+}
+
+.row-content .widget .widget-content a div h1 {
+  font-size: 4.5rem;
+  padding-top: 0.5rem;
+  text-shadow: -0.3rem 0.45rem 0.2rem rgba(56, 55, 55, 0.607);
+  color: #fff;
+  margin-left: 0;
+}
+
+.row-content .widget .widget-content a div:hover {
+  background: #ffffff;
+  box-shadow: 0 0 5rem #2e94e3;
+}
+
+.row-content .widget .widget-content a div p {
+  color: black;
+}
