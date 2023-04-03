@@ -1,19 +1,18 @@
 const express = require('express');
-const path = require('path');
-const mqtt = require('mqtt');
-const dashboardRouter = require('./routes/dashboard');
-
 const app = express();
-app.set("view engine", "ejs");
+const config = require('./config');
+const mqtt = require('./lib/mqtt');
+const Router = require('./routes/index');
 
-// express middleware
-app.set('views', path.join(__dirname, 'pages'));
+// on public folder, use ejs as template instead of html (to easify routing)
+app.set('views', __dirname + '/public');
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'pages')));
 
-app.use('/', dashboardRouter);
+// direct any route to / 
+app.use(express.static(__dirname + '/public'));
+app.use('/', Router);
 
-const PORT = process.env.PORT || 8889;
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+const port = 8889;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });

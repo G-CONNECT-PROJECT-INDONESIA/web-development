@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sono" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/LOCATIONstyle.css">
+    <title>LOCATION-GCONNECT</title>
+</head>
+
+<body>
+    <header class="headnav">
+
+        <div class="logo-gconnect-group">
+            <img src="imgs/LOGO PNG.png" alt="">
+            <a href="index.html">
+                <h1>G-connect</h1>
+                <p>Early Warning System</p>
+            </a>
+
+        </div>
+
+        <div class="search-group">
+            <input class="search" type="text" placeholder="Cari...">
+            <buttton class="search-btn">Cari</buttton>
+        </div>
+
+    </header>
+
+    <div class="row-content">
+        <div class="menu-container">
+
+            <div class="menu-button">
+                <a href="index">
+                    <img src="public/imgs/chart-icon.png" alt="">
+                    <p>DASHBOARD</p>
+                </a>
+            </div>
+            <div class="menu-button">
+                <a href="REALTIME">
+                    <img src="public/imgs/ikon-dasbor.png" alt="">
+                    <p>REALTIME</p>
+                </a>
+            </div>
+            <div class="menu-button">
+                <a href="LOCATION">
+                    <img src="public/imgs/ikon-lokasi.png" alt="">
+                    <p>LOCATION</p>
+                </a>
+            </div>
+
+        </div>
+
+
+
+        <div class="content">
+            <div class="content-title">
+                <h1>NODES LOCATION</h1>
+            </div>
+
+            <div class="content-maps">
+                <iframe src="https://snazzymaps.com/embed/466095" style="border:none;"></iframe>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- 
+    <div class="menu-container">
+        <div class="grafik-menu">
+            <a href="index.html">
+                <input class="grafik-button" type="image" src="public/imgs/chart-icon.png">
+                <span class="tulisan-grafik">Grafik</span>
+            </a>
+        </div>
+        <div class="darbord-menu">
+            <a href="REALTIME.html">
+                <input class="dasbord-button" type="image" src="public/imgs/ikon-dasbor.png">
+                <span class="tulisan-dasbord">Realtime</span>
+            </a>
+        </div>
+        <div class="notifikasi-menu">
+            <a href="#">
+                <input class="notifikasi-button" type="image" src="public/imgs/ikon-notifikasi.png">
+                <span class="tulisan-notifikasi">Notifikasi</span>
+            </a>
+        </div>
+        <div class="lokasi-menu">
+            <a href="#">
+                <input class="lokasi-button" type="image" src="public/imgs/ikon-lokasi.png">
+                <span class="tulisan-lokasi">Lokasi</span>
+            </a>
+        </div>
+        <div class="akun-menu">
+            <a href="#">
+                <input class="akun-button" type="image" src="public/imgs/ikon-akun.png">
+                <span class="tulisan-akun">Account</span>
+            </a>
+        </div>
+    </div> -->
+
+
+
+    <!-- <footer>
+        <img class="logo-footer" src="public/imgs/LOGO LANDSCAPE 2.png">
+    </footer>
+     -->
+    <script src="public/js/chart.js"></script>
+    <script src="public/js/canvasjs.min.js"></script>
+    <script src="index.js"></script>
+    <script src="mqtt.js"></script>
+</body>
+
+</html>

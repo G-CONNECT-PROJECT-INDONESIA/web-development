@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sono" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon/Milk" rel="stylesheet"
+        type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/REALTIME.css">
+    <title>REALIME-DASHBOARD-GCONNECT</title>
+</head>
+
+<body onload="initClock(); mqttconnect()">
+
+    <header class="headnav">
+
+        <div class="logo-gconnect-group">
+            <img src="imgs/LOGO PNG.png" alt="">
+            <a href="index.html">
+                <h1>G-connect</h1>
+                <p>Early Warning System</p>
+            </a>
+
+        </div>
+
+        <div class="search-group">
+            <input class="search" type="text" placeholder="Cari...">
+            <buttton class="search-btn">Cari</buttton>
+        </div>
+
+    </header>
+
+    <div class="row-content">
+        <div class="menu-container">
+
+            <div class="menu-button">
+                <a href="index">
+                    <img src="imgs/chart-icon.png" alt="">
+                    <p>DASHBOARD</p>
+                </a>
+            </div>
+            <div class="menu-button">
+                <a href="REALTIME">
+                    <img src="/imgs/ikon-dasbor.png" alt="">
+                    <p>REALTIME</p>
+                </a>
+            </div>
+            <div class="menu-button">
+                <a href="LOCATION">
+                    <img src="/imgs/ikon-lokasi.png" alt="">
+                    <p>LOCATION</p>
+                </a>
+            </div>
+
+        </div>
+
+
+
+        <div class="content">
+            <div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>
+                    <span id="period">AM</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="node-input">
+            <select id="node-option" onchange="scrollToElement()">
+                <option value="hurr" selected disabled hidden> Pilih Node </option>
+                <option value="#widget-node1">Node 1</option>
+                <option value="#widget-node2">Node 2</option>
+                <option value="#widget-node3">Node 3</option>
+            </select>
+        </div>
+
+
+
+        <div class="widget">
+            <div id="widget-node1">
+                <h1>NODE 1</h1>
+
+                <div class="btr-info">
+                    <p>Battery = &nbsp;</p>
+                    <div id="btr1-percent">
+
+                    </div>
+                </div>
+
+                <div class="widget-content">
+
+                    <a href="index.html">
+                        <div id="dashboard-1">
+                            <p id="tulisan-ws">Windspeed (m/s)</p>
+                            <h1 id="variabel-ws">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-2">
+                            <p id="tulisan-hum">Air Humidity</p>
+                            <h1 id="variabel-hum">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-3">
+                            <p id="tulisan-temp">Temperature</p>
+                            <h1 id="variabel-temp">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-4">
+                            <p id="tulisan-soil">Soil Mosture</p>
+                            <h1 id="variabel-soil">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-5">
+                            <p id="tulisan-lat">Latitude</p>
+                            <h1 id="variabel-lat">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-6">
+                            <p id="tulisan-long">Longitude</p>
+                            <h1 id="variabel-long">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-7">
+                            <p id="tulisan-acx">AcX</p>
+                            <h1 id="variabel-acx">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-8">
+                            <p id="tulisan-acy">AcY</p>
+                            <h1 id="variabel-acy">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-9">
+                            <p id="tulisan-acz">AcZ</p>
+                            <h1 id="variabel-acz">20</h1>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+            <div id="widget-node2">
+                <h1>NODE 2</h1>
+
+                <div class="btr-info">
+                    <p>Battery = &nbsp;</p>
+                    <div id="btr2-percent">
+
+                    </div>
+                </div>
+
+                <div class="widget-content">
+
+                    <a href="index.html">
+                        <div id="dashboard-1">
+                            <p id="tulisan-ws">Windspeed (m/s)</p>
+                            <h1 id="variabel-ws">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-2">
+                            <p id="tulisan-hum">Air Humidity</p>
+                            <h1 id="variabel-hum">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-3">
+                            <p id="tulisan-temp">Temperature</p>
+                            <h1 id="variabel-temp">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-4">
+                            <p id="tulisan-soil">Soil Mosture</p>
+                            <h1 id="variabel-soil">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-5">
+                            <p id="tulisan-lat">Latitude</p>
+                            <h1 id="variabel-lat">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-6">
+                            <p id="tulisan-long">Longitude</p>
+                            <h1 id="variabel-long">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-7">
+                            <p id="tulisan-acx">AcX</p>
+                            <h1 id="variabel-acx">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-8">
+                            <p id="tulisan-acy">AcY</p>
+                            <h1 id="variabel-acy">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-9">
+                            <p id="tulisan-acz">AcZ</p>
+                            <h1 id="variabel-acz">20</h1>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+            <div id="widget-node3">
+                <h1>NODE 3</h1>
+
+                <div class="btr-info">
+                    <p>Battery= &nbsp;</p>
+                    <div id="btr3-percent">
+
+                    </div>
+                </div>
+
+                <div class="widget-content">
+
+                    <a href="index.html">
+                        <div id="dashboard-1">
+                            <p id="tulisan-ws">Windspeed (m/s)</p>
+                            <h1 id="variabel-ws">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-2">
+                            <p id="tulisan-hum">Air Humidity</p>
+                            <h1 id="variabel-hum">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-3">
+                            <p id="tulisan-temp">Temperature</p>
+                            <h1 id="variabel-temp">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-4">
+                            <p id="tulisan-soil">Soil Mosture</p>
+                            <h1 id="variabel-soil">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-5">
+                            <p id="tulisan-lat">Latitude</p>
+                            <h1 id="variabel-lat">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-6">
+                            <p id="tulisan-long">Longitude</p>
+                            <h1 id="variabel-long">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-7">
+                            <p id="tulisan-acx">AcX</p>
+                            <h1 id="variabel-acx">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-8">
+                            <p id="tulisan-acy">AcY</p>
+                            <h1 id="variabel-acy">20</h1>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div id="dashboard-9">
+                            <p id="tulisan-acz">AcZ</p>
+                            <h1 id="variabel-acz">20</h1>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script type="text/javascript" src="/js/clock.js"></script>
+    <script src="mqtt.js"></script>
+    <script src="//js/realtimejs.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
