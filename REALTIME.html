@@ -18,9 +18,9 @@
 
 <body onload="initClock(); mqttconnect()">
 
-    <header class="headnav">
+    <header class="headnav"> <!--Navigation Bar-->
 
-        <div class="logo-gconnect-group">
+        <div class="logo-gconnect-group"> <!--Logo dan Tulisan Group-->
             <img src="public/imgs/LOGO PNG.png" alt="">
             <a href="index.html">
                 <h1>G-connect</h1>
@@ -29,15 +29,15 @@
 
         </div>
 
-        <div class="search-group">
+        <div class="search-group"> <!--Search input dan Search Button Group-->
             <input class="search" type="text" placeholder="Cari...">
             <buttton class="search-btn">Cari</buttton>
         </div>
 
     </header>
 
-    <div class="row-content">
-        <div class="menu-container">
+    <div class="row-content"> <!--Baris Konten-->
+        <div class="menu-container"> <!--Menu group yang di samping kiri-->
 
             <div class="menu-button">
                 <a href="index.html">
@@ -62,7 +62,7 @@
 
 
 
-        <div class="content">
+        <div class="content"> <!--baris content berisikan informasi waktu-->
             <div class="datetime">
                 <div class="date">
                     <span id="dayname">Day</span>,
@@ -81,7 +81,7 @@
         </div>
 
 
-        <div class="node-input">
+        <div class="node-input"> <!--opsi memilih node yang dituju-->
             <select id="node-option" onchange="scrollToElement()">
                 <option value="hurr" selected disabled hidden> Pilih Node </option>
                 <option value="#widget-node1">Node 1</option>
@@ -92,7 +92,7 @@
 
 
 
-        <div class="widget">
+        <div class="widget"> <!--Informasi Sensor-->
             <div id="widget-node1">
                 <h1>NODE 1</h1>
 
